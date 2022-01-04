@@ -24,3 +24,4 @@ hs_err_pid*
 
 #ignore junit tests
 test-output/
+chromedriver.exe
