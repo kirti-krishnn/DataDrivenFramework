@@ -12,35 +12,41 @@ public class loginTest extends BaseUI{
 	public void testOne() {
 		
 		invokeBrowser("Chrome");
-		openURL("https:\\www.rediff.com");
-		ElementClick("//*[@id=\"signin_info\"]/a[1]");
-		enterText("//*[@id=\"login1\"]","TestUserRediff");
-		enterText("//*[@id=\"password\"]","Test@123");
-		ElementClick("/html/body/div/div[1]/div[1]/div[2]/form/div[1]/div[2]/div[2]/div[2]/input[2]");
+		System.out.println("1");
+		openURL("websiteURL");
+		ElementClick("signinBtn_xpath");
+		enterText("userNameTextBox_id","TestUserRediff");
+		enterText("passwordTextBox_xpath","Test@123");
+		ElementClick("submitBtn_CSS");
 		tearDown();
+		//quitBrowser();
 		
 	}
     
-	@Test(dependsOnMethods="testOne")
+	//@Test (dependsOnMethods="testOne")
 	public void testTwo() {
 		
-		invokeBrowser("Chrome");
-		openURL("https:\\www.rediff.com");
-		ElementClick("//*[@id=\"signin_info\"]/a[1]");
-		enterText("//*[@id=\"login1\"]","TestUserRediff");
-		enterText("//*[@id=\"password\"]","Test@123");
-		ElementClick("/html/body/div/div[1]/div[1]/div[2]/form/div[1]/div[2]/div[2]/div[2]/input[2]");
+		invokeBrowser("browserName");
+		System.out.println("2");
+		openURL("websiteURL");
+		ElementClick("signinBtn_xpath");
+		enterText("userNameTextBox_xpath","TestUserRediff");
+		enterText("passwordTextBox_xpath","Test@123");
+		ElementClick("submitBtn_xpath");
 		tearDown();
+		//quitBrowser();
 	}
 	
-	@Test(dependsOnMethods="testTwo")
+	//@Test(dependsOnMethods="testTwo")
 	public void testThree() {
-		invokeBrowser("Chrome");
-		openURL("https:\\www.rediff.com");
-		ElementClick("//*[@id=\"signin_info\"]/a[1]");
-		enterText("//*[@id=\"login1\"]","TestUserRediff");
-		enterText("//*[@id=\"password\"]","Test@123");
-		ElementClick("/html/body/div/div[1]/div[1]/div[2]/form/div[1]/div[2]/div[2]/div[2]/input[2]");
+		invokeBrowser("browserName");
+		System.out.println("3");
+		openURL("websiteURL");
+		ElementClick("signinBtn_xpath");
+		enterText("userNameTextBox_xpath","TestUserRediff");
+		enterText("passwordTextBox_xpath","Test@123");
+		ElementClick("submitBtn_xpath");
 		tearDown();
+		//quitBrowser();
 	}
 }
